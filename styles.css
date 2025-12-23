@@ -1,0 +1,55 @@
+body {
+    background-image: url("limatower.jpeg");
+    background-image: -webkit-radial-gradient();
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    color: antiquewhite;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+h2{
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#increment-btn {
+    background: darkred;
+    block-size: 50px;
+}
+
+#decrement-btn {
+    background: green;
+    block-size: 50px;
+}
+
+#reset-btn {
+    background: orange;
+    block-size: 50px;
+}
+
+.available {
+  color: #00ff88;
+}
+
+.full {
+  color: #ff4d4d;
+}
