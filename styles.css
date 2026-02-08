@@ -1,57 +1,28 @@
-body {
-    background-image: url("limatower.jpeg");
-    background-repeat: no-repeat;      /* stop tiling */
-    background-size: cover;            /* fill screen */
-    background-position: center;       /* center image */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minibus Capacity Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    text-align: center;
-    color: antiquewhite;
-}
+<body>
 
-h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: aliceblue;
-}
+<div class="app">
+    <h1>Minibus Capacity Tracker</h1>
 
-h2{
-    font-size: 50px;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    color: aliceblue;
-}
+    <p class="capacity">Capacity: 14 passengers</p>
+    <p id="status" class="available">Status: Available</p>
 
-button {
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: black;
-    font-weight: bold;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
+    <h2 id="count">0</h2>
 
-#increment-btn {
-    background: darkred;
-    block-size: 50px;
-}
+    <div class="btn-group">
+        <button id="increment-btn" onclick="increment()">+ Board Passenger</button>
+        <button id="decrement-btn" onclick="decrement()">- Passenger Alighted</button>
+        <button id="reset-btn" onclick="reset()">Reset Trip</button>
+    </div>
+</div>
 
-#decrement-btn {
-    background: green;
-    block-size: 50px;
-}
-
-#reset-btn {
-    background: orange;
-    block-size: 50px;
-}
-
-.available {
-  color: #00ff88;
-}
-
-.full {
-  color: #ff4d4d;
-}
+<script src="script.js"></script>
+</body>
+</html>
