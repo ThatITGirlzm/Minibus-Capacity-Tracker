@@ -1,4 +1,17 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Full viewport fix for mobile */
 body {
+    min-height: 100dvh; /* dynamic viewport height — mobile safe */
+
     background-image: url("limatower.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,22 +26,28 @@ body {
     align-items: center;
 }
 
-/* Dark overlay for readability */
+/* Dark overlay */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.45);
+    z-index: 0;
 }
 
 .app {
     position: relative;
+    z-index: 1;
+
     text-align: center;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.6);
     padding: 30px;
-    border-radius: 12px;
-    backdrop-filter: blur(4px);
+    border-radius: 14px;
+    width: 90%;
+    max-width: 420px;
 }
+
+/* Text */
 
 h1 {
     margin: 0 0 10px 0;
@@ -36,7 +55,7 @@ h1 {
 }
 
 .capacity {
-    margin: 5px 0;
+    margin: 6px 0;
 }
 
 h2 {
@@ -50,18 +69,17 @@ h2 {
 .btn-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    gap: 12px;
 }
 
 button {
-    width: 220px;
-    padding: 12px;
+    width: 100%;
+    padding: 14px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 #increment-btn {
@@ -79,7 +97,7 @@ button {
     color: black;
 }
 
-/* Status colors */
+/* Status */
 
 .available {
     color: #00ff88;
