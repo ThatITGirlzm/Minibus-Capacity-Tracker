@@ -43,8 +43,8 @@ body::before {
     background: rgba(0,0,0,0.6);
     padding: 30px;
     border-radius: 14px;
-    width: 90%;
-    max-width: 420px;
+    width: 95%;
+    max-width: 520px;
 }
 
 /* Text */
