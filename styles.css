@@ -1,7 +1,9 @@
 body {
     background-image: url("limatower.jpeg");
-    background-image: -webkit-radial-gradient();
-    background-size: cover;
+    background-repeat: no-repeat;      /* stop tiling */
+    background-size: cover;            /* fill screen */
+    background-position: center;       /* center image */
+
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     text-align: center;
