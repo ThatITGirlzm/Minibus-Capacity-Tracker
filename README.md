@@ -51,6 +51,8 @@ It also serves as a learning project to practice:
 Lombe Kufika
 -Web Developer & Computer Science Student
 
+Live site: https://main--super-sfogliatella-121e54.netlify.app/
+
 📄 License
 
 This project is open-source and available for learning and but not for personal use.
