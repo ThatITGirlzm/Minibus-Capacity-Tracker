@@ -1,28 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Minibus Capacity Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    background-image: url("limatower.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-<body>
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: antiquewhite;
 
-<div class="app">
-    <h1>Minibus Capacity Tracker</h1>
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    <p class="capacity">Capacity: 14 passengers</p>
-    <p id="status" class="available">Status: Available</p>
+/* Dark overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
 
-    <h2 id="count">0</h2>
+.app {
+    position: relative;
+    text-align: center;
+    background: rgba(0,0,0,0.55);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
 
-    <div class="btn-group">
-        <button id="increment-btn" onclick="increment()">+ Board Passenger</button>
-        <button id="decrement-btn" onclick="decrement()">- Passenger Alighted</button>
-        <button id="reset-btn" onclick="reset()">Reset Trip</button>
-    </div>
-</div>
+h1 {
+    margin: 0 0 10px 0;
+    color: white;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+.capacity {
+    margin: 5px 0;
+}
+
+h2 {
+    font-size: 64px;
+    margin: 10px 0;
+    color: white;
+}
+
+/* Buttons */
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    width: 220px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#increment-btn {
+    background: darkred;
+    color: white;
+}
+
+#decrement-btn {
+    background: green;
+    color: white;
+}
+
+#reset-btn {
+    background: orange;
+    color: black;
+}
+
+/* Status colors */
+
+.available {
+    color: #00ff88;
+}
+
+.full {
+    color: #ff4d4d;
+}
