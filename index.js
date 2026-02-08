@@ -1,38 +1,38 @@
-let count = 0;
-let capacity = 14;
+let count = 0
+const maxCapacity = 14
 
-let countEl = document.getElementById("count-el");
-let statusEl = document.getElementById("status-el");
-let incrementBtn = document.getElementById("increment-btn");
-let decrementBtn = document.getElementById("decrement-btn");
-let resetBtn = document.getElementById("reset-btn");
+const countEl = document.getElementById("count")
+const statusEl = document.getElementById("status")
 
-incrementBtn.addEventListener("click", function () {
-    if (count < capacity) {
-        count++;
-        countEl.textContent = count;
-        statusEl.textContent = "Available";
+function updateStatus() {
+    if (count >= maxCapacity) {
+        statusEl.textContent = "Status: FULL"
+        statusEl.className = "full"
     } else {
-        statusEl.textContent = "BUS FULL";
+        statusEl.textContent = "Status: Available"
+        statusEl.className = "available"
     }
-});
+}
 
-decrementBtn.addEventListener("click", function () {
+function increment() {
+    if (count < maxCapacity) {
+        count++
+        countEl.textContent = count
+        updateStatus()
+    }
+}
+
+function decrement() {
     if (count > 0) {
-        count--;
-        countEl.textContent = count;
-        statusEl.textContent = "Available";
+        count--
+        countEl.textContent = count
+        updateStatus()
     }
-});
+}
 
-resetBtn.addEventListener("click", function () {
-    if (confirm("Start new trip?")) {
-        count = 0;
-        countEl.textContent = 0;
-        statusEl.textContent = "Available";
-    }
-});
-statusEl.className = "available";
-// when full:
-statusEl.className = "full";
+function reset() {
+    count = 0
+    countEl.textContent = count
+    updateStatus()
+}
 
