@@ -10,7 +10,7 @@ html, body {
 
 /* Full viewport fix for mobile */
 body {
-    min-height: 100dvh; /* dynamic viewport height — mobile safe */
+    min-height: 80dvh; /* dynamic viewport height — mobile safe */
 
     background-image: url("limatower.jpeg");
     background-repeat: no-repeat;
